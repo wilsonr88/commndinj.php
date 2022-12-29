@@ -1,13 +1,9 @@
-<?php     include("../common/header.php");   ?>
-<!-- from https://pentesterlab.com/exercises/php_include_and_post_exploitation/course -->
-<?php  hint("will exec 'whois' with the arg specified in the POST parameter \"domain\""); ?>
-
-<form action="/CMD-4/index.php" method="POST">
-    <input type="text" name="domain">
-</form>
-
-<pre>
-<?php
-    system("whois " . $_POST["domain"]);
- ?>
-</pre>
+<div class = "vulnerable_code_area">
+  <form name = "HTMLi" action="#" method="GET">
+   <p>What's your name?</p>
+   <input type="text" name="name">
+   <input type="submit" value="Submit">
+    </form>
+    <pre>Hello<h1>TEST</h1></pre>
+</div>
+      
